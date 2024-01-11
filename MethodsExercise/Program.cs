@@ -2,6 +2,32 @@
 {
     public class Program
     {
+        public static int Add(int x, int y)
+        {
+            int answer = x + y;
+            return answer;
+        }
+
+        public static int Subtract(int x, int y)
+        {
+            int answer = x - y;
+            return answer;
+        }
+
+        public static int Multiply(int x, int y)
+        {
+            int answer = x * y;
+            return answer;
+        }
+
+        public static double Divide(double x, double y)
+        {
+            double answer = x / y;
+            return answer;
+        }
+
+
+
         public static void MadLib()
         {
             Console.WriteLine("What is your name?");
@@ -64,7 +90,28 @@
 
         static void Main(string[] args)
         {
-            MadLib();
+            //MadLib();
+
+            Console.Write("Enter any whole number: ");
+            int input1 = Convert.ToInt32(Console.ReadLine());
+            
+            Console.Write("Enter another whole number: ");
+            int input2 = Convert.ToInt32(Console.ReadLine());
+
+            int sum = Add(input1, input2);
+            Console.WriteLine($"{input1} + {input2} = {sum}");
+
+            int minus = Subtract(input1, input2);
+            Console.WriteLine($"{input1} - {input2} = {minus}");
+
+            int product = Multiply(input1, input2);
+            Console.WriteLine($"{input1} x {input2} = {product}");
+
+            //double num1 = Convert.ToInt64(input1);
+            //double num2 = Convert.ToInt64(input2);
+
+            double fraction = Divide(input1, input2);
+            Console.WriteLine($"{input1} ÷ {input2} = {fraction}");
         }
     }
 }
